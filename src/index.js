@@ -65,7 +65,7 @@ const upload = (job, settings, src, params) => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('uid', job.uid);
-        return fetch(params.callback, {
+        return fetch(params.destinationUri, {
             method: 'POST',
             body: formData
         })
