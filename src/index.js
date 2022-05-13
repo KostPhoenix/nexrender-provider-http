@@ -35,7 +35,6 @@ class ChunkUploader {
 
     nextChunk() {
         const chunkEndBytes = this.chunkEnd();
-        console.log(this.startBytes + ' ' + chunkEndBytes);
         return this.file.slice(this.startBytes, chunkEndBytes);
     }
 
